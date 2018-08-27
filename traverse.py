@@ -12,9 +12,6 @@ except:
 from com.dtmilano.android.viewclient import ViewClient
 from com.dtmilano.android.viewclient import View
 
-#Hyprmediate AdColony "control-closeButton"
-#Admob                "delay_close_button"
-
 vc = ViewClient(*ViewClient.connectToDeviceOrExit())
 
 vc.traverse()

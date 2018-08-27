@@ -1,0 +1,12 @@
+StartApp "close-circle"
+Hyprmediate AdColony "control-closeButton"
+Admob                "delay_close_button"
+chartboost           "close-button"
+
+
+watch
+chartboost "pre-roll-cta"
+
+
+install 
+chartboost  "hud-cta"

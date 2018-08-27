@@ -14,5 +14,5 @@ from com.dtmilano.android.viewclient import View
 
 vc = ViewClient(*ViewClient.connectToDeviceOrExit())
 
-btn = vc.findViewByIdOrRaise("control-closeButton")
+btn = vc.findViewByIdOrRaise("close-button")
 btn.touch()
