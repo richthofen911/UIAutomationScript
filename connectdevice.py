@@ -12,8 +12,8 @@ except:
 from com.dtmilano.android.viewclient import ViewClient
 from com.dtmilano.android.viewclient import View
 
-vc = ViewClient(*ViewClient.connectToDeviceOrExit())
+devices = *ViewClient.connectToDeviceOrExit()
+print devices
+#vc = ViewClient(*ViewClient.connectToDeviceOrExit())
 
-btn = vc.findViewByIdOrRaise("android:id/button1")
-#btn = vc.findViewWithText("UNINSTALL")
-btn.touch()
+

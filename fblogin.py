@@ -12,21 +12,38 @@ except:
    
 from com.dtmilano.android.viewclient import ViewClient
 from com.dtmilano.android.viewclient import View
+from com.dtmilano.android.viewclient import ViewNotFoundException
 
 screen_one = ViewClient(*ViewClient.connectToDeviceOrExit())
-
 email = screen_one.findViewByIdOrRaise("m_login_email")
-passwd = screen_one.findViewByIdOrRaise("m_login_password")
-loginbtn = screen_one.findViewByIdOrRaise("u_0_5")
-
+email.touch()
 email.setText("x2012ato@stfx.ca")
+
+screen_one = ViewClient(*ViewClient.connectToDeviceOrExit())
+passwd = screen_one.findViewByIdOrRaise("m_login_password")
+passwd.touch()
 passwd.setText("aragon911119")
+
+screen_one = ViewClient(*ViewClient.connectToDeviceOrExit())
+loginbtn = screen_one.findViewByIdOrRaise("u_0_5")
 loginbtn.touch()
 
 time.sleep(5)
 
-screen_two = ViewClient(*ViewClient.connectToDeviceOrExit())
-continuebtn = screen_two.findViewByIdOrRaise("u_0_9")
-continuebtn.touch()
+done = False
+while done == False:
+    try:
+        screen_two = ViewClient(*ViewClient.connectToDeviceOrExit())
+        continuebtn = screen_two.findViewByIdOrRaise("u_0_9")
+        done = True
+        continuebtn.touch()
+    except ViewNotFoundException:
+        print 'still loading'
+        time.sleep(1)
+        
+
+        
+
+
 
 

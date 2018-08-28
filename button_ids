@@ -1,3 +1,18 @@
+Google Play store
+	install btn = vc.findViewWithText("INSTALL")
+	open btn = vc.findViewWithText("OPEN")
+	uninstall btn vc.findViewWithText("UNINSTALL")
+	uninstall_confirm_btn android:id/button1 OK
+	back 
+
+	wifi download only proceed button      android:id/button1
+
+in app
+	permission allow          com.android.pacakgeinstaller:id/permission_allow_button
+
+AdColony 
+	install "GEC CTA Button"
+
 StartApp "close-circle"
 Hyprmediate AdColony "control-closeButton"
 Admob                "delay_close_button"

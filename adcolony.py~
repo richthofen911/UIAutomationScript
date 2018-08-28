@@ -2,6 +2,7 @@
 
 import sys
 import os
+import time
 
     
 try:
@@ -12,7 +13,11 @@ except:
 from com.dtmilano.android.viewclient import ViewClient
 from com.dtmilano.android.viewclient import View
 
+time.sleep(30)
 vc = ViewClient(*ViewClient.connectToDeviceOrExit())
+
+readyToInstall = False
+
 
 btn = vc.findViewByIdOrRaise("android:id/button1")
 #btn = vc.findViewWithText("UNINSTALL")
